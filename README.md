@@ -1,4 +1,3 @@
-
 # Kafka Transactions Example
 
 This project demonstrates the usage of **Kafka transactions** to guarantee exactly-once delivery of messages. It includes a producer that uses transactions to send messages and a consumer that reads only committed transactions.
@@ -28,6 +27,7 @@ kafka-transactions-example/
 ## Prerequisites
 
 1. **Kafka and Zookeeper**:
+
    - Kafka must be configured and running locally or on a server.
    - Ensure the following properties are set in your Kafka configuration:
      ```properties
@@ -74,11 +74,13 @@ python consumer/transactional_consumer.py
 ## How to Run
 
 1. **Create the Topic**:
+
    ```bash
    python topics/create_topic.py
    ```
 
 2. **Start the Producer**:
+
    ```bash
    python producer/transactional_producer.py
    ```
@@ -93,6 +95,7 @@ python consumer/transactional_consumer.py
 ## Validation
 
 1. **Test Exactly-Once Semantics**:
+
    - Observe that messages are consumed only after the transaction is committed.
    - Simulate a failure in the producer (e.g., abort the transaction) and verify that no messages are delivered.
 
@@ -126,5 +129,5 @@ pip install -r requirements.txt
 
 ## Project Author
 
-- **Name**: EL BAHRAOUI HASSAN
+- **Name**: EL BACHAR WALID
 - **Field**: Data Science, AI, and Digital Health Engineering
